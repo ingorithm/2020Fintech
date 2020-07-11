@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+    <input type="text" id="userId"/><br>
+    <input type="text" id="userPassword"/><br>
+    <button id="loginBtn">login</button>
+</body>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+<script>
+    console.log('test');
+    $("#loginBtn").click(function(){
+        var userIdInput = $("#userId").val();
+        var userPasswordInput = $("#userPassword").val();
+        console.log('사용자 입력값은 :',userId, userPassword);
+        // Ajax 시작
+        $.ajax({
+            url:'/inputTest',
+            type : 'POST',
+            data : {
+                userIdBody : userIdInput,
+                userPasswordBody : userPasswordInput
+            },
+            success:function(data){
+            }
+        })
+        // Ajax 종료
+    })
+</script>
+</html>
