@@ -7,6 +7,7 @@ var z = x + y;
 var obj = x + y;
 //var obj = x + j;
 //var obj = x + t;
+// console.log(t);
 console.log(obj);
 
 
